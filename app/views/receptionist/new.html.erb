@@ -1,0 +1,14 @@
+<h1>Add new patient</h1>
+
+<%= form_with model: @new_patient_record, url: receptionist_create_path do |form| %>
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+    <div>
+        <%= form.label :age %>
+        <%= form.text_field :age %>
+    </div>
+
+    <%= form.button %>
+<% end %>

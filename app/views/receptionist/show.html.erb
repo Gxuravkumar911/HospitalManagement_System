@@ -1,0 +1,9 @@
+<h1>Patient Details</h1>
+
+<div class="patient-data">
+  <h3><%= @patient_record.name %></h3>
+  <p>Age: <%= @patient_record.age %></p>
+</div>
+
+ <%= button_to "Delete Patient", delete_patient_path(@patient_record), method: :delete, data: { confirm: "Are you sure you want to delete this patient?" } %>
+<%= link_to "Back to Patient List", receptionist_path %>

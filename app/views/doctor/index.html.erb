@@ -1,0 +1,27 @@
+<h1>Hospital ke Doctor Portal me aapka swagat hai🙏</h1>
+<%= link_to "Check weekly graph", doctor_graph_path %>
+
+<h3>List of all Patients</h3>
+<% @patient_records.order(created_at: :asc).each do |patient| %>
+    <div class="patient-data">
+        <h6><%= patient.name %><h6>
+        <p>Age:  <%= patient.age %> </p>
+        <p>Admitted on:  <%= patient.created_at.strftime("%d %B %Y") %></p>
+    </div>
+<% end %>
+
+<style>
+    .patient-data{
+        margin: 20px 10px;
+
+        & h6{
+            font-size: 20px;
+            margin: 0;
+        }
+
+        & p{
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+</style>

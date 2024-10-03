@@ -1,0 +1,32 @@
+<h1>List of patients</h1>
+
+<%= link_to "Add New Patient", new_patient_path %>
+
+
+<% @patient_records.order(created_at: :asc).each do |patient| %>
+  <div class="patient-data">
+    <h6><%= patient.name %></h6>
+    <p>Age <%= patient.age %></p>
+    <%= link_to "Edit", edit_patient_path(patient) %>
+    <%= link_to "Details", patient_details_path(patient) %>
+    <%= button_to "Delete", delete_patient_path(patient), method: :delete, data: { confirm: "Are you sure you want to delete this patient?" } %> 
+  </div> 
+<% end %>
+
+
+
+<style>
+    .patient-data{
+        margin: 20px 10px;
+
+        & h6{
+            font-size: 20px;
+            margin: 0;
+        }
+
+        & p{
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+</style>

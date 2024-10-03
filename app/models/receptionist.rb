@@ -1,0 +1,2 @@
+class Receptionist < ApplicationRecord
+end
