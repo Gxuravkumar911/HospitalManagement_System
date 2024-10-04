@@ -2,11 +2,11 @@
 
 Welcome to the HospitalManagementSystem(HMS), a simple Rails application that provides receptionists and doctors with the ability to manage patient records and view patient registration trends.
 
-##Technologies used:
-- Backend: Ruby on Rails
-- Database: PostgreSQL
-- Authentication: Devise
-- Graph implentation: Chartkick
+## Technologies used:
+-   Backend: Ruby on Rails
+-   Database: PostgreSQL
+-   Authentication: Devise
+-   Graph implentation: Chartkick
 
 ## Features
 -   Two user roles: Receptionist and Doctor
